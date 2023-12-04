@@ -33,7 +33,7 @@ function Contact() {
         // a reference to the form element
         e.target,
         // your user ID (protip: create a .env file to store it)
-        process.env.REACT_APP_EMAILJS_USERID
+        import.meta.env.VITE_APP_EMAILJS_USERID
       )
       .then(
         // handle the success response
