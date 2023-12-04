@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
-function Intro() {
+const Intro = ({ text, delay }) => {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Typing logic goes here
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setCurrentText((prevText) => prevText + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }, delay);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, delay, text]);
+
   return (
     <div className="container mx-auto px-4 py-80">
       <h1 className="text-5xl font-bold text-center text-gray-800">
-        Welcome to my web portfolio
+        {currentText}
       </h1>
       <div className="flex justify-center items-center mt-8">
         <img
@@ -14,7 +29,7 @@ function Intro() {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

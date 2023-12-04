@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar() {
+function NavBar({ darkMode, toggleDarkMode }) {
   // State to toggle the menu button on small screens
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -35,8 +35,8 @@ function NavBar() {
                 onClick={() => scrollToSection("who-am-i")}
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   selectedSection === "who-am-i"
-                    ? "bg-gray-900 text-white"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? darkMode ? "bg-blue-dark text-white" : "bg-gray-900 text-white"
+                  : darkMode ? "text-white hover:bg-dark-blue-dark" : "text-gray-300 hover:bg-gray-700 hover:text-white"
                 }`}
               >
                 Who am I?
@@ -60,6 +60,12 @@ function NavBar() {
                 }`}
               >
                 Contact
+              </button>
+              <button
+                onClick={toggleDarkMode}
+                className="px-3 py-2 rounded-md text-sm font-medium"
+              >
+                {darkMode ? "Light Mode" : "Dark Mode"}
               </button>
             </div>
           </div>
