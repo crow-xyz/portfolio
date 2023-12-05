@@ -16,7 +16,11 @@ function App() {
 
   return (
     <>
-      <div className={`App ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+      <div
+        className={`App ${
+          darkMode ? "bg-#fafafa text-black" : "bg-darkblue-dark text-white"
+        }`}
+      >
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Intro text="Welcome to my portfolio" delay={75} />
         <section id="who-am-i">

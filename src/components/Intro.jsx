@@ -17,17 +17,10 @@ const Intro = ({ text, delay }) => {
   }, [currentIndex, delay, text]);
 
   return (
-    <div className="container mx-auto px-4 py-80">
-      <h1 className="text-5xl font-bold text-center text-gray-800">
+    <div className="container mx-auto px-4 h-screen flex items-center justify-center dark:bg-gray-800">
+      <h1 className="text-5xl font-bold text-center text-white dark:text-gray-200">
         {currentText}
       </h1>
-      <div className="flex justify-center items-center mt-8">
-        <img
-          className="w-96 h-96 object-cover"
-          src="/portfolio.jpg"
-          alt="Portfolio"
-        />
-      </div>
     </div>
   );
 };
