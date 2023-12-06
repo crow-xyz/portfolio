@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
       },
+      variants: {
+        backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
+        textColor: ['responsive', 'hover', 'focus', 'dark'],
+      },
       colors: {
         'cyan': {
           'light': '#66fcf1',

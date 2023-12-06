@@ -38,51 +38,40 @@ function NavBar({ darkMode, toggleDarkMode }) {
         setSelectedSection("");
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-
   return (
     <nav
-      className={`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] ${
+      className={`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 ${
         isScrolled
           ? "bg-transparent supports-backdrop-blur:bg-darkblue-dark"
-          : "bg-blue-900/80 supports-backdrop-blur:bg-darkblue-dark dark:bg-slate-900/75"
+          : "bg-gradient-to-b from-indigo-900/50 dark:from-gray-800/80 supports-backdrop-blur:bg-darkblue-dark dark:supports-backdrop-blur:bg-gray-900"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              {/* You can add your logo here */}
-              <img className="h-8 w-8" src="/logo.svg" alt="Logo" />
-            </div>
-          </div>
+        <div className="flex items-center justify-center h-20">
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4 flex-grow justify-center">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <button
                 onClick={() => scrollToSection("who-am-i")}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-xl font-medium ${
                   selectedSection === "who-am-i"
-                    ? darkMode
-                      ? "bg-blue-dark text-white"
-                      : "bg-gray-900 text-white"
-                    : darkMode
-                    ? "text-white hover:bg-dark-blue-dark"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "bg-gray-900 text-white"
+                  : "text-black-300 hover:bg-transparent hover:text-white"
                 }`}
               >
                 Who am I?
               </button>
               <button
                 onClick={() => scrollToSection("portfolio")}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-xl font-medium ${
                   selectedSection === "portfolio"
                     ? "bg-gray-900 text-white"
                     : "text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -92,7 +81,7 @@ function NavBar({ darkMode, toggleDarkMode }) {
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-xl font-medium ${
                   selectedSection === "contact"
                     ? "bg-gray-900 text-white"
                     : "text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -100,12 +89,20 @@ function NavBar({ darkMode, toggleDarkMode }) {
               >
                 Contact
               </button>
-              <button
-                onClick={toggleDarkMode}
-                className="px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {darkMode ? "Dark Mode" : "Light Mode"}
-              </button>
+              <div className="relative inline-block w-10 ml-auto align-middle select-none transition duration-200 ease-in">
+                <input
+                  type="checkbox"
+                  name="toggle"
+                  id="toggle"
+                  checked={darkMode}
+                  onChange={toggleDarkMode}
+                  className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white appearance-none cursor-pointer"
+                />
+                <label
+                  htmlFor="toggle"
+                  className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+                ></label>
+              </div>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">

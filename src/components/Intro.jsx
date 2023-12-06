@@ -17,8 +17,8 @@ const Intro = ({ text, delay }) => {
   }, [currentIndex, delay, text]);
 
   return (
-    <div className="container mx-auto px-4 h-screen flex items-center justify-center dark:bg-gray-800">
-      <h1 className="text-5xl font-bold text-center text-white dark:text-gray-200">
+    <div className="container mx-auto px-4 h-screen flex items-center justify-center dark:bg-#fafafa">
+      <h1 className="text-5xl font-bold text-center dark:text-darkblue-dark">
         {currentText}
       </h1>
     </div>

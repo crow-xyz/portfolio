@@ -31,9 +31,9 @@ function Portfolio() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h2 className="text-4xl font-bold text-center text-gray-800">My Projects</h2>
-      <p className="text-lg text-center text-gray-600 mt-4">
+    <div className="container mx-auto px-4 py-36 h-screen">
+      <h2 className="text-4xl font-bold text-center">My Projects</h2>
+      <p className="text-lg text-center text-gray dark:text-darkblue-dark mt-4">
         Here are some of the projects that I have built using React and other technologies. You can click on the project title to see the live demo, or click on the GitHub icon to see the source code.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">

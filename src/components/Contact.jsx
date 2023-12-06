@@ -78,11 +78,11 @@ function Contact() {
   }
 
   return (
-    <div className='container mx-auto px-4 py-16'>
-      <h2 className='text-4xl font-bold text-center text-gray-800'>
+    <div className='container mx-auto px-4 py-36 h-screen'>
+      <h2 className='text-4xl font-bold text-center'>
         Contact Me
       </h2>
-      <p className='text-lg text-center text-gray-600 mt-4'>
+      <p className='text-lg text-center text-gray dark:text-darkblue-dark mt-4'>
         If you have any questions, feedback, or suggestions, please feel free to
         send me a message using the form below. I will get back to you as soon
         as possible.
@@ -90,7 +90,7 @@ function Contact() {
       <form className='max-w-2xl mx-auto mt-8' onSubmit={handleSubmit}>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='form-group'>
-            <label htmlFor='name' className='text-gray-800'>
+            <label htmlFor='name' className='text-gray dark:text-darkblue-dark'>
               Name
             </label>
             <input
@@ -104,7 +104,7 @@ function Contact() {
             />
           </div>
           <div className='form-group'>
-            <label htmlFor='email' className='text-gray-800'>
+            <label htmlFor='email' className='text-gray dark:text-darkblue-dark'>
               Email
             </label>
             <input
@@ -119,7 +119,7 @@ function Contact() {
           </div>
         </div>
         <div className='form-group mt-4'>
-          <label htmlFor='subject' className='text-gray-800'>
+          <label htmlFor='subject' className='text-gray dark:text-darkblue-dark'>
             Subject
           </label>
           <input
@@ -133,7 +133,7 @@ function Contact() {
           />
         </div>
         <div className='form-group mt-4'>
-          <label htmlFor='message' className='text-gray-800'>
+          <label htmlFor='message' className='text-gray dark:text-darkblue-dark'>
             Message
           </label>
           <textarea
@@ -149,7 +149,7 @@ function Contact() {
         <div className='form-group mt-4'>
           <button
             type='submit'
-            className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+            className='bg-gradient-to-b from-indigo-800 text-white px-6 py-3 rounded hover:bg-blue-700 dark:bg-gray-800 dark:text-white'
             disabled={formStatus.submitting}
           >
             {formStatus.submitting ? 'Sending...' : 'Send'}

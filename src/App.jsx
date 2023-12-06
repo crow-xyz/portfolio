@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,13 +13,18 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
   };
 
   return (
     <>
       <div
         className={`App ${
-          darkMode ? "bg-#fafafa text-black" : "bg-darkblue-dark text-white"
+          darkMode ? "bg-#fafafa text-black" : "bg-black text-white"
         }`}
       >
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -33,6 +39,7 @@ function App() {
           <Contact />
         </section>
         <Footer />
+        <ScrollToTop />
       </div>
     </>
   );
