@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
+        'press-start': ['"Press Start 2P"', 'cursive'],
       },
       variants: {
         backgroundColor: ['responsive', 'hover', 'focus', 'dark'],

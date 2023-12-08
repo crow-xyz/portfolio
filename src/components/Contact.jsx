@@ -78,8 +78,8 @@ function Contact() {
   }
 
   return (
-    <div className='container mx-auto px-4 py-36 h-screen'>
-      <h2 className='text-4xl font-bold text-center'>
+    <div className='container mx-auto px-4'>
+      <h2 className='text-3xl font-press-start font-bold text-center'>
         Contact Me
       </h2>
       <p className='text-lg text-center text-gray dark:text-darkblue-dark mt-4'>

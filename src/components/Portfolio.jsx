@@ -31,16 +31,16 @@ function Portfolio() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-36 h-screen">
-      <h2 className="text-4xl font-bold text-center">My Projects</h2>
-      <p className="text-lg text-center text-gray dark:text-darkblue-dark mt-4">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-press-start text-center">My Projects</h2>
+      <p className="text-lg text-center text-gray dark:text-darkblue-dark mt-4 font-sans">
         Here are some of the projects that I have built using React and other technologies. You can click on the project title to see the live demo, or click on the GitHub icon to see the source code.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white shadow-lg rounded-lg overflow-hidden"
+            className="bg-darkblue-light shadow-lg rounded-lg overflow-hidden"
           >
             <img
               className="w-full h-64 object-cover"
@@ -52,17 +52,17 @@ function Portfolio() {
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="text-2xl font-semibold text-gray-800 hover:text-blue-600"
+                className="text-2xl font-semibold text-gray-400 hover:text-white"
               >
                 {project.title}
               </a>
-              <p className="text-gray-600 mt-2">{project.description}</p>
+              <p className="text-gray-400 mt-2">{project.description}</p>
               <div className="flex items-center mt-4">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-800 hover:text-blue-600"
+                  className="text-white hover:text-blue-600"
                 >
                   <svg
                     className="w-6 h-6 fill-current"

@@ -5,7 +5,8 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from "./components/ScrollToTop";
+import Section from "./components/Section";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +15,9 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
-      document.body.classList.add('dark');
+      document.body.classList.add("dark");
     } else {
-      document.body.classList.remove('dark');
+      document.body.classList.remove("dark");
     }
   };
 
@@ -29,15 +30,25 @@ function App() {
       >
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Intro text="Welcome to my portfolio" delay={75} />
-        <section id="who-am-i">
+        <Section
+          id="who-am-i"
+          padding="8rem 0"
+        >
           <WhoAmI />
-        </section>
-        <section id="portfolio">
+        </Section>
+        <Section
+          id="portfolio"
+          padding="8rem 0"
+        >
           <Portfolio />
-        </section>
-        <section id="contact">
+        </Section>
+        <Section
+          id="contact"
+          padding="8rem 0"
+        >
           <Contact />
-        </section>
+        </Section>
+
         <Footer />
         <ScrollToTop />
       </div>

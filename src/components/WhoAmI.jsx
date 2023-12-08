@@ -2,8 +2,8 @@ import React from 'react'
 
 function WhoAmI() {
   return (
-    <div className="container mx-auto px-4 py-36 h-screen">
-      <h1 className="text-4xl font-bold text-center">
+    <div className="container mx-auto px-4">
+      <h1 className="text-3xl font-sans font-press-start font-bold text-center">
         Hi, I'm Nicolás García
       </h1>
       <p className="text-lg text-center text-gray dark:text-darkblue-dark mt-4">
@@ -18,7 +18,7 @@ function WhoAmI() {
         <div className="w-64 ml-8">
           <h2 className="text-2xl font-semibold">About me</h2>
           <p className="text-gray dark:text-darkblue-dark mt-2">
-            I am studying for a "Programmer Analyst" degree at the DuocUC Professional Institute in Chile
+            I am studying a "Programmer Analyst" degree at the DuocUC Professional Institute in Chile
           </p>
           <p className="text-gray dark:text-darkblue-dark mt-2">
             I have an international certificate of Intermediate English level
